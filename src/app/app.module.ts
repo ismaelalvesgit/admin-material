@@ -13,6 +13,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { DeviceDetectorModule } from 'ngx-device-detector';
 import { NgxMaskModule } from 'ngx-mask';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { Ng2OdometerModule } from 'ng2-odometer';
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
@@ -28,14 +30,31 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
+//services
+import { NavService } from './services/nav.service';
+
 //componets
 import { AppComponent } from './app.component';
+import { LoginComponent } from './acesso/login/login.component';
+import { ResetComponent } from './acesso/reset/reset.component';
+import { AdminComponent } from './admin/admin.component';
+import { FooterComponent } from './admin/footer/footer.component';
+import { HeaderComponent } from './admin/header/header.component';
+import { SideComponent } from './admin/side/side.component';
+import { DashboardComponent } from './admin/views/dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     OnlyNumberDirective,
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    ResetComponent,
+    AdminComponent,
+    FooterComponent,
+    HeaderComponent,
+    SideComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -56,11 +75,14 @@ import { AppComponent } from './app.component';
     DeviceDetectorModule,
     NgxMaskModule.forRoot(),
     DeviceDetectorModule,
+    Ng2OdometerModule,
+    FlexLayoutModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: LOCALE_ID, useValue: 'pt-BR' },
     MatDatepickerModule, 
+    NavService
   ],
   bootstrap: [AppComponent]
 })

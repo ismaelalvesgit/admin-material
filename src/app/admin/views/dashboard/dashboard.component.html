@@ -1,0 +1,15 @@
+<div class="row m-1 mt-3">
+    <div class="row col m-1 text-white" *ngFor="let dashData of dashCard" >
+        <div fxFlex="40" fxLayout="row"  fxLayoutAlign="center center" class="text-center col" [style.background]="dashData?.colorLight">
+            <mat-icon >{{dashData?.icon}}</mat-icon>
+        </div>
+        <div class="col" [style.background]="dashData?.colorDark" >
+            <div style="color: white;font-size: 40px">
+              <ng2-odometer [number]="dashData?.number" [config]="{ }"></ng2-odometer>
+            </div>
+            <p class="mat-body-1 border-top">
+              {{dashData?.title}}
+            </p>
+        </div>
+    </div>
+</div>

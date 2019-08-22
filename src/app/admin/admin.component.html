@@ -1,0 +1,11 @@
+<mat-sidenav-container fullscreen> 
+  <mat-sidenav #appDrawer [mode]="sideNavMode" [opened]="sideNavOpened" style="background-color: #424242;">
+    <app-side></app-side>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header></app-header>
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

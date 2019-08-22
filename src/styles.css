@@ -1,1 +1,175 @@
 /* You can add global styles to this file, and also import other style files */
+/*------------------------------
+	padrao - tags
+--------------------------------*/
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, 
+    "Helvetica Neue", 
+    sans-serif; 
+    font-size: 12px;
+    background-color: rgba(244, 244, 244, 0.68);
+}
+p{
+    color: #2c2929;
+}
+::-webkit-scrollbar {
+    width:2px;
+    height:10px;
+}
+::-webkit-scrollbar-thumb:vertical {
+    background:#000000;
+} 
+::-webkit-scrollbar-thumb:horizontal {
+    background:#000000;
+
+}
+.a:not([href]) {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+.a:not([href]):hover {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+.dropdown-item:not([href]):hover{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+.bg{
+    background-image: url("./assets/login.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+/*------------------------------
+	forms - material - tabs
+--------------------------------*/
+
+/*input outline color*/
+/*.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #000000!important;
+    opacity: 1!important;
+}*/
+
+/*mat-input error outline color*/
+/*.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
+    color: red!important;
+    opacity: 0.8!important;
+}*/
+
+/* mat-input carent color*/
+/*  .mat-input-element {
+    caret-color: red!important;
+}*/
+
+/*mat-input error carent color*/
+/*.mat-form-field-invalid .mat-input-element, .mat-warn .mat-input-element {
+    caret-color: red!important;
+}*/
+
+/*mat-label normal state style*/
+/*.mat-form-field-label {
+    color: rgba(0,0,0,.6)!important;
+     color: #000!important;
+}*/
+
+/*mat-label focused style*/
+/* .mat-form-field.mat-focused .mat-form-field-label {
+    color: red!important;
+}*/
+
+/* mat-label error style*/
+/* .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+    color: red!important;
+}*/
+
+/* Styles for tab labels */
+/*.mat-tab-label {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: red;
+    font-weight: 700;
+} */
+
+/* Styles for the active tab label */
+/* .mat-tab-label.mat-tab-label-active {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: red;
+    font-weight: 700;
+}*/
+
+/* Styles for the ink bar */
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background:#0bdfd8;
+}
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+    z-index: 99999 !important;
+}
+.form-custom
+{
+    border-radius: 20px;
+    padding: 5vh;
+    overflow: visible;
+}
+.list-custom li{
+    margin-left: -5vh;
+    list-style: none;
+}
+.icon-click{
+    cursor: pointer;
+}
+.mat-form{
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.mat-form input{
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.nav-pills > li > a {
+    border-radius: 0;
+}
+/*------------------------------
+	links e rotas
+--------------------------------*/
+.router{
+    color: #0bdfd8;
+}
+.router:hover{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*--------------------------------------------------------
+    botões - styles
+--------------------------------------------------------*/
+a[mat-button], a[mat-raised-button], a[mat-icon-button], a[mat-fab],
+a[mat-mini-fab] a[mat-stroked-button] a[mat-flat-button]{
+    text-decoration: none;
+    color: #fff;
+}
+.primary{
+    color: #fff;
+    background: #06998e;
+}
+.secondary{
+    color: #fff;
+    background: #4d7df0;
+}
+.float-button-end{
+    float: left;
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+}

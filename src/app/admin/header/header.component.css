@@ -1,0 +1,49 @@
+.topo{
+    animation-duration: .2s;
+    background-color: #00aba5;
+    width: 100%;
+    top: 0;
+}
+.topo-btn{
+    cursor: pointer;
+}
+.topo-btn img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.btn-menu{
+    margin-left: 30vh;
+    color: #ffffff;
+}
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+}
+@media (max-width: 768px) {
+    .btn-menu{
+        margin-left: 5vh;
+    }
+}
+.dropdown {
+    display: flex;
+    justify-content: center;
+    min-width: 160px;
+}
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.name {
+    margin: 0 8px 0 10px;
+}
+.icon {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    transform: rotate(0);
+    transition: transform .25s cubic-bezier(.25,.8,.25,1);
+}

@@ -1,0 +1,10 @@
+mat-sidenav {
+    width: 300px;
+}
+.mat-sidenav:not(.mat-sidenav-side) {
+    position: fixed;
+}
+
+.mat-sidenav-backdrop {
+    position: fixed !important;
+}
