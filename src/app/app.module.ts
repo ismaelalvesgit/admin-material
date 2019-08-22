@@ -14,7 +14,6 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
 import { NgxMaskModule } from 'ngx-mask';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { Ng2OdometerModule } from 'ng2-odometer';
-import { FlexLayoutModule } from "@angular/flex-layout";
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
@@ -32,6 +31,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 //services
 import { NavService } from './services/nav.service';
+import { UtilsService } from './services/utils.service';
 
 //componets
 import { AppComponent } from './app.component';
@@ -42,7 +42,9 @@ import { FooterComponent } from './admin/footer/footer.component';
 import { HeaderComponent } from './admin/header/header.component';
 import { SideComponent } from './admin/side/side.component';
 import { DashboardComponent } from './admin/views/dashboard/dashboard.component';
-
+import { InternetComponent } from './utils/internet/internet.component';
+import { NotFoudComponent } from './utils/not-foud/not-foud.component';
+import { NotFoudAdminComponent } from './utils/not-foud-admin/not-foud-admin.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,10 @@ import { DashboardComponent } from './admin/views/dashboard/dashboard.component'
     FooterComponent,
     HeaderComponent,
     SideComponent,
-    DashboardComponent
+    DashboardComponent,
+    InternetComponent,
+    NotFoudComponent,
+    NotFoudAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -76,13 +81,13 @@ import { DashboardComponent } from './admin/views/dashboard/dashboard.component'
     NgxMaskModule.forRoot(),
     DeviceDetectorModule,
     Ng2OdometerModule,
-    FlexLayoutModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     { provide: LOCALE_ID, useValue: 'pt-BR' },
     MatDatepickerModule, 
-    NavService
+    NavService,
+    UtilsService
   ],
   bootstrap: [AppComponent]
 })

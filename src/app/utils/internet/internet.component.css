@@ -1,0 +1,28 @@
+.bg-not-found{
+    background: #1e88e5;
+    text-align: center;
+    font-family: 'Droid Sans', sans-serif;
+    height: 100vh;
+}
+.bg-not-found a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+.body{
+    padding-top: 25vh;
+}
+.title{
+    color: #ffffff;
+    font-size: 50px;
+}
+.title:hover{
+    transform: scale(1.5);
+    transition: 1s;  
+}
+.subtitle{
+    color: #ffffff;
+}
+.footer{
+    margin-top: 45vh;
+}
